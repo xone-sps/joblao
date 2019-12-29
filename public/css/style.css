@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: 'boonhome-regular';
+    src: url(../fonts/BOONHOME-400.OTF) format("truetype");
+}
+
+@font-face {
+    font-family: 'boonhome-bold';
+    src: url(../fonts/BoonHome-700.ttf) format("truetype");
+    src: url(../fonts/BoonHome-700.ttf) format("truetype");
+}
+
+body, button, input, select, textarea {
+
+  font-family:'boonhome-regular', 'Google Sans', arial, serif, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'Roboto', 'boonhome-bold' !important;
+    font-size: normal;
+}
+#app-content{
+    min-height: 480px;
+    background-color: #f3f4f5;
+}

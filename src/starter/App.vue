@@ -1,16 +1,28 @@
 <template>
   <div id="app">
   <Header/>
-    <router-view></router-view>
+  <div id="app-content">
+<router-view></router-view>
+  </div>
+    
   <Footer/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Partial/Header'
+import {mapState} from 'vuex'
+import Header from '@/components/Partial/Navbar'
 import Footer from '@/components/Partial/Footer'
+// import Footer from '@/components/Partial/Sidebar'
 export default {
   name: 'app',
+    computed: {
+            ...mapState(['isMobile']),
+        },
+          methods: {
+            // ...mapMutations(['setMobile']),
+            // ...mapActions(['fetchHomeData', 'fetchAuthUserInfo']),
+        },
   components: {
     Header,
     Footer
