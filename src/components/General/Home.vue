@@ -1,42 +1,83 @@
 <template>
   <div>
-  <section class="section">
+  <div class="hot-course">
+    <section class="section">
     <div class="container">
-        <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+      <div class="hot-course-title">
+        <h2>ຫຼັກສູດ</h2>
+        </div>
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-2-desktop is-3-tablet is-6-mobile" v-for="(item,index) in course" :key="index" >
+            <div class="card hot-card">
+              <div class="card-image">
+                <img :src="item.image" alt="">
+              </div>
+              <div class="card-content course">
+                <p>{{item.name}}</p>
+              </div>
+            </div>
+          </div>
+          </div>   
     </div>
   </section>
   </div>
+    <div class="hot-center">
+    <section class="section">
+    <div class="container">
+      <div class="hot-course-title">
+        <h2>ສູນພັດທະນາ</h2>
+        </div>
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-2-desktop is-3-tablet is-6-mobile" v-for="(item,index) in course" :key="index" >
+            <div class="card center-card">
+              <div class="card-image">
+                <img :src="item.image" alt="">
+              </div>
+            </div>
+          </div>
+          </div>   
+    </div>
+  </section>
+  </div>
+  </div>
 </template>
-
 <script>
 export default {
   name: 'HelloWorld',
+  data: ()=>({
+course:[
+       {
+        id: 1,
+        image:'https://media.jobthai.com/v1/images/logo-pic-map/181461_logo_20191206133721.png',
+        name:'ຂະໝົມລາວແລະເຄັກ',
+       },
+       {
+        id: 2,
+        image:'/images/logistic.jpeg',
+        name:'ຂະໝົມລາວແລະເຄັກ',
+       },
+       {
+        id: 3,
+        image:'https://media.jobthai.com/v1/images/logo-pic-map/196199_logo_20190927104039.png',
+        name:'ດັດແປງແບບກະໂປ່ງດັດແປງແບບກະໂປ່ງ',
+       },
+       {
+        id: 4,
+        image:'https://media.jobthai.com/v1/images/logo/135828_logo_201709141116.jpeg',
+        name:'ຂະໝົມລາວແລະເຄັກ',
+       },
+        {
+        id: 5,
+        image:'https://media.jobthai.com/v1/images/logo/139006_logo_201909201005.png',
+        name:'ດັດແປງແບບກະໂປ່ງ',
+       },
+       {
+        id: 6,
+        image:'https://media.jobthai.com/v1/images/logo/133060_logo_201909201054.png',
+        name:'ຂະໝົມລາວແລະເຄັກ',
+       }
+      ]
+  }),
   props: {
     msg: String
   }
@@ -45,6 +86,83 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hot-course{
+  
+}
+.card.hot-card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 247, 251);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(222, 222, 222);
+    border-image: initial;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+.card.hot-card .card-image{
+  position: relative;
+    width: 100%;
+    padding-top: 55%;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+}
+.card.hot-card .card-image img{
+  display: block;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.card-content.course{
+  position: relative;
+    width: 100%;
+    min-height: 45%;
+    padding: 0.5em;
+
+}
+.hot-course-title{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    padding-right: 0px;
+    padding-left: 0px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    line-height: 1;
+    display: block;
+    text-align: left;
+}
+.card.center-card{
+  position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(222, 222, 222);
+    border-image: initial;
+    border-radius: 0.6em;
+}
+.card-image{
+position:initial;
+}
+.center-card .card-image img{
+    display: block;
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    cursor: pointer;
+}
 h3 {
   margin: 40px 0 0;
 }

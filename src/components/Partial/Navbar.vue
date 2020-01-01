@@ -18,15 +18,14 @@
            <!-- <i class="fas fa-bars"></i> -->
          </a>
   </div>
-
   <div class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item">
-        Home
+        ໜ້າຫຼັກ
       </a>
-      <a class="navbar-item">
-        ຫາວຽກ
-      </a>
+      <router-link to="/course" class="navbar-item">
+        ຫຼັກສູດ
+      </router-link>
      <router-link to="/job">
      </router-link>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -51,22 +50,18 @@
         </div>
       </div>
     </div>
-
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
+        <a class="navbar-item">
+        ລົງທະບຽນ
+      </a>
+      <a class="navbar-item">
+        ເຂົ້າສູ່ລະບົບ
+      </a>
       </div>
     </div>
   </div>
 </nav>
-
 
 <!-- Sidebar mobile-->
 <div v-if="showNav">
@@ -152,8 +147,6 @@
 </section>
 </div>
 </div>
-
-
   </div>
 </template>
 <script>
