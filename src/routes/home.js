@@ -13,7 +13,7 @@ export default [
     name: 'job',
   },
   {
-    path:'/CourseSingle',
+    path:'/CourseSingle/:id',
     component:CourseSingle,
     name: 'coursesingle',
   }

@@ -3,21 +3,14 @@
   <div class="hot-course">
     <section class="section">
     <div class="container">
-      <div class="hot-course-title">
-        <h2>ຫຼັກສູດ</h2>
+      <div class="columns">
+        <div class="column is-4">
+          <SearchSidebar/>
         </div>
-        <div class="columns is-mobile is-multiline">
-          <div class="column is-2-desktop is-3-tablet is-6-mobile" v-for="(item,index) in course" :key="index" >
-            <div class="card hot-card">
-              <div class="card-image">
-                <img :src="item.image" alt="">
-              </div>
-              <div class="card-content course">
-                <p>{{item.name}}</p>
-              </div>
-            </div>
-          </div>
-          </div>   
+        <div class="column is-8">
+          <course></course>
+        </div>
+        </div>  
     </div>
   </section>
   </div>
@@ -42,8 +35,10 @@
   </div>
 </template>
 <script>
+import SearchSidebar from '@/components/General/Main/SearchSidebar'
+import Course from '@/components/General/Course'
 export default {
-  name: 'HelloWorld',
+  name: 'home',
   data: ()=>({
 course:[
        {
@@ -80,15 +75,16 @@ course:[
   }),
   props: {
     msg: String
+  },
+  components:{
+   SearchSidebar,
+   Course
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hot-course{
-  
-}
 .card.hot-card{
     position: relative;
     width: 100%;

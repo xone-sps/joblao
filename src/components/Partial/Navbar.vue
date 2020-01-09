@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
+    <a class="navbar-item" href="/">
       <img  width="80" height="80" src="/logo.jpg">
     </a>
     <a role="button" class="navbar-burger burger" v-if="!showNav" @click="showNavbar">
@@ -20,9 +20,9 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <router-link to="/" class="navbar-item">
         ໜ້າຫຼັກ
-      </a>
+      </router-link>
       <router-link to="/course" class="navbar-item">
         ຫຼັກສູດ
       </router-link>
