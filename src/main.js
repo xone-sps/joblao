@@ -8,7 +8,7 @@ import axios from 'axios';
 Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
-Vue.prototype.rootUrl = window.baseUrl;
+Vue.prototype.rootUrl = window.baseUrl; 
 Vue.prototype.$axios = axios;
 
 

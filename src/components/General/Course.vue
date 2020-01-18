@@ -35,7 +35,7 @@ export default {
       return {
       current: 1,
       sector:'',
-      // course:'',
+      course:'',
     tap:[
       {
         id:1,
@@ -201,7 +201,7 @@ export default {
       }},
       methods:{
         getSector(){
-            this.$axios.get('http://159.65.142.243/api/home/dev-course-post').then(res =>{
+            this.$axios.get(this.rootUrl + 'home/course-post').then(res =>{
                 this.sector = res.data.sector;
                this.course = res.data.course_post;
             })
