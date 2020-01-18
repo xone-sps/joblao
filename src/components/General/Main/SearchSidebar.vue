@@ -2,15 +2,11 @@
   <div>
       <div class="search-sidebar">
          <div class="search-container">
-                <div class="panel is-link">
-                    <p class="panel-heading">
-                    Link
-                </p>
-                </div>
+                    <p>ຄົ້ນຫາຫຼັກສູດ</p>
               <div class="panel-block">
-                 <p class="control has-icons-left">
+                 <p class="control has-icons-right">
                 <input class="input is-link" type="text" placeholder="Search">
-                <span class="icon is-left">
+                <span class="icon is-right">
                     <i class="fas fa-search" aria-hidden="true"></i>
                 </span>
                 </p>
@@ -32,5 +28,16 @@
 }
 .search-container{
     padding: 10px 14px;
+}
+.control.has-icons-right .icon:hover{
+cursor: pointer;
+}
+.control.has-icons-right .icon:hover{
+background: red;
+}
+
+.control.has-icons-left .icon, .control.has-icons-right .icon{
+    color: #fe6d43 !important;
+    cursor: pointer;
 }
 </style>

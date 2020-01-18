@@ -4,10 +4,7 @@
     <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-4">
-          <SearchSidebar/>
-        </div>
-        <div class="column is-8">
+        <div class="column is-12">
           <course></course>
         </div>
         </div>  
@@ -19,24 +16,18 @@
     <div class="container">
       <div class="hot-course-title">
         <h2>ສູນພັດທະນາ</h2>
+         <Slider></Slider>
         </div>
-        <div class="columns is-mobile is-multiline">
-          <div class="column is-2-desktop is-3-tablet is-6-mobile" v-for="(item,index) in course" :key="index" >
-            <div class="card center-card">
-              <div class="card-image">
-                <img :src="item.image" alt="">
-              </div>
-            </div>
-          </div>
-          </div>   
     </div>
   </section>
   </div>
   </div>
 </template>
 <script>
-import SearchSidebar from '@/components/General/Main/SearchSidebar'
-import Course from '@/components/General/Course'
+// import SearchSidebar from '@/components/General/Main/SearchSidebar'
+import Course from '@/components/General/Course';
+import Slider from '@/components/General/Main/Slider';
+// import Swiper from 'swiper/js/swiper.esm.bundle';
 export default {
   name: 'home',
   data: ()=>({
@@ -77,9 +68,10 @@ course:[
     msg: String
   },
   components:{
-   SearchSidebar,
-   Course
-  }
+   Course,
+   Slider
+  },
+  
 }
 </script>
 
@@ -94,7 +86,7 @@ course:[
     border-style: solid;
     border-color: rgb(222, 222, 222);
     border-image: initial;
-    border-radius: 0.6em;
+    border-radius: 0.4em;
     cursor: pointer;
 }
 .card.hot-card .card-image{
@@ -173,4 +165,31 @@ li {
 a {
   color: #42b983;
 }
+
+/* slider */
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 200px !important;
+      background: pink;
+      border: 1px solid #888;
+    }
 </style>

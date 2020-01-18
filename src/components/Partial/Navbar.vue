@@ -20,13 +20,16 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start">
-      <router-link to="/" class="navbar-item">
+      <router-link to="/" class="navbar-item" active-class="active" exact>
         ໜ້າຫຼັກ
       </router-link>
-      <router-link to="/course" class="navbar-item">
+      <router-link to="/course" class="navbar-item" active-class="active" exact>
         ຫຼັກສູດ
       </router-link>
      <router-link to="/job">
+     </router-link>
+     <router-link to="/about" class="navbar-item" active-class="active" exact>
+      ກ່ຽວກັບພວກເຮົາ
      </router-link>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
